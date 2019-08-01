@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="box">
+
+        <div id="card1">
+
+            <button type="button" id="button" onclick="Ordenanumeros()">
+            
+            </button>
+
+        </div>
+
+        <div id="card2">
+
+            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script>
+        function Ordenanumeros() {
+
+            var Qnumero = window.prompt("digite a quantidade de numeros que serão inseridos");
+            var sequencia = [];
+            var primo = 0;
+            for (i = 0; i < Qnumero; i++) {
+                var numero = prompt("digite um numero");
+                sequencia.push(numero);
+                var qp = 0;
+                for (j = 1; j <= numero; j++) {
+                    if (numero % j == 0) {
+                        qp++;
+                    }
+                }
+                if (qp == 2) {
+                    primo++;
+                } else {}
+
+
+                document.getElementById('textarea').textContent = "a quantidade de primos foi " + primo;
+
+                console.log(sequencia);
+                console.log(primo);
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

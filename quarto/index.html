@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="box" id="box">
+
+        <div class="card1" id="card1">
+
+            <div class="inputNum" id="inputNum">
+
+                <form>
+                    Número 1:
+                    <input type="number" name="num1" id="num1" onkeypress="return onlynumber();"> Número 2:
+                    <input type="number" name="num2" id="num2" onkeypress="return onlynumber();">
+
+                </form>
+            </div>
+            <div class="button" id="divButton">
+                <button type="button" id="button" onclick="calcular()">
+                    Calcular
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card2" id="card2">
+
+
+
+        </div>
+
+
+    </div>
+    <script>
+        function calcular() {
+
+
+
+            var valor = document.getElementById('num1').value * document.getElementById('num2').value;
+
+            document.getElementById('card2').textContent = valor;
+
+
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
